@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import java.util.UUID;
 
 /**
  * packageName: com.jd.junction.hospital.service
@@ -35,7 +36,7 @@ public class HospitalService {
         for(HospitalEnum item : HospitalEnum.values()){
             HospitalDTO hospitalDTO = HospitalDTO.builder()
                     .name(item.description)
-                    .code(String.format("AB", item.id))
+                    .code(UUID.randomUUID().toString().substring(0,20))
                     .id(item.id)
                     .doctorName(String.format("%s 병원장님", item.description))
                     .build();
