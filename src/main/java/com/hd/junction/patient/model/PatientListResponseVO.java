@@ -1,12 +1,14 @@
-package com.jd.junction.patient.model;
+package com.hd.junction.patient.model;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * packageName: com.jd.junction.patient.model
- * fileName: PatientResponseVO
+ * fileName: PatientListResponseVO
  * author: deco
  * date: 2023/05/09
  * description
@@ -18,13 +20,13 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 @Getter
-public class PatientResponseVO {
+public class PatientListResponseVO {
     private String message;
-    private PatientDTO patient;
+    private List<PatientDTO> list;
 
     @Builder
-    public PatientResponseVO(String message, PatientDTO patient){
+    public PatientListResponseVO(String message, List<PatientDTO> list){
         this.message = message;
-        this.patient = patient;
+        this.list = list;
     }
 }

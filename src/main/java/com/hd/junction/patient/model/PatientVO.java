@@ -1,12 +1,9 @@
-package com.jd.junction.patient.model;
+package com.hd.junction.patient.model;
 
-import com.jd.junction.hospital.enumeration.HospitalEnum;
-import com.jd.junction.patient.enumeration.PatientSexCode;
+import com.hd.junction.hospital.enumeration.HospitalEnum;
+import com.hd.junction.patient.enumeration.PatientSexCode;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
 
 /**
  * packageName: com.jd.junction.patient.model

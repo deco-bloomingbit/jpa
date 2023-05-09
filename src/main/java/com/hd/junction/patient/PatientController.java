@@ -1,11 +1,12 @@
-package com.jd.junction.patient;
+package com.hd.junction.patient;
 
-import com.jd.junction.patient.model.PatientDTO;
-import com.jd.junction.patient.model.PatientResponseVO;
-import com.jd.junction.patient.model.PatientVO;
-import com.jd.junction.patient.service.PatientService;
+import com.hd.junction.patient.model.PatientListResponseVO;
+import com.hd.junction.patient.service.PatientService;
+import com.hd.junction.patient.model.PatientDTO;
+import com.hd.junction.patient.model.PatientResponseVO;
+import com.hd.junction.patient.model.PatientVO;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,6 +54,9 @@ public class PatientController {
 
     }
 
-
-
+    @GetMapping(value="inquiry", name="환자목록조회")
+    @ResponseBody
+    public PatientListResponseVO regist(@RequestParam Integer pageSize, @RequestParam Integer pageNo) {
+        return patientService.inquiryPatient(pageSize,pageNo);
+    }
 }

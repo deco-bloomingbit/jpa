@@ -1,4 +1,6 @@
-package com.jd.junction.patient.enumeration;
+package com.hd.junction.patient.enumeration;
+
+import com.hd.junction.hospital.enumeration.HospitalEnum;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +31,7 @@ public enum PatientSexCode {
         this.description = description;
     }
 
-    private static final Map<String, PatientSexCode> typesByValue = new HashMap<>(com.jd.junction.hospital.enumeration.HospitalEnum.values().length);
+    private static final Map<String, PatientSexCode> typesByValue = new HashMap<>(HospitalEnum.values().length);
 
     static {
         for (PatientSexCode type : PatientSexCode.values()) {

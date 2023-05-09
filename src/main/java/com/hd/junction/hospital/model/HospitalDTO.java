@@ -1,4 +1,4 @@
-package com.jd.junction.hospital.model;
+package com.hd.junction.hospital.model;
 
 import lombok.Builder;
 import lombok.Data;

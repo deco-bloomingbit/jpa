@@ -1,4 +1,4 @@
-package com.jd.junction.hospital.enumeration;
+package com.hd.junction.hospital.enumeration;
 
 import java.util.HashMap;
 import java.util.Map;

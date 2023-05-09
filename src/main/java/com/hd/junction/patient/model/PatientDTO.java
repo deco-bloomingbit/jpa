@@ -1,6 +1,5 @@
-package com.jd.junction.patient.model;
+package com.hd.junction.patient.model;
 
-import com.jd.junction.patient.enumeration.PatientSexCode;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,6 @@
-package com.jd.junction.patient.repository;
+package com.hd.junction.patient.repository;
 
-import com.jd.junction.hospital.model.HospitalDTO;
-import com.jd.junction.patient.model.PatientDTO;
+import com.hd.junction.patient.model.PatientDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
