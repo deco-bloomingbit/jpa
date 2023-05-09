@@ -5,6 +5,7 @@ import com.hd.junction.patient.service.PatientService;
 import com.hd.junction.patient.model.PatientDTO;
 import com.hd.junction.patient.model.PatientResponseVO;
 import com.hd.junction.patient.model.PatientVO;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,6 +39,7 @@ public class PatientController {
 
     @PostMapping(value="regist", name="환자등록")
     @ResponseBody
+    @Operation(summary = "환자등록", description = "환자등록을 합니다.")
     public PatientResponseVO regist(@RequestBody PatientVO patientVO) {
         try{
             return patientService.registerPatient(PatientDTO.builder()
@@ -56,7 +58,8 @@ public class PatientController {
 
     @GetMapping(value="inquiry", name="환자목록조회")
     @ResponseBody
-    public PatientListResponseVO regist(@RequestParam Integer pageSize, @RequestParam Integer pageNo) {
+    @Operation(summary = "환자목록조회", description = "환자 목록 조회를 합니다.")
+    public PatientListResponseVO inquiry(@RequestParam Integer pageSize, @RequestParam Integer pageNo) {
         return patientService.inquiryPatient(pageSize,pageNo);
     }
 }
