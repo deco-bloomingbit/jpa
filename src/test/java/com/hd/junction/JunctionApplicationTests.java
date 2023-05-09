@@ -1,4 +1,4 @@
-package com.jd.junction;
+package com.hd.junction;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.jd.junction.common;
+package com.hd.junction.common;
 
 import io.swagger.models.auth.In;
 import io.swagger.v3.oas.models.security.SecurityScheme;
@@ -20,7 +20,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.util.Arrays;
 
 /**
- * packageName: com.jd.junction.common
+ * packageName: com.hd.junction.common
  * fileName: SwaggerConfigure
  * author: deco
  * date: 2023/05/09
@@ -36,10 +36,10 @@ public class SwaggerConfigure implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("JD Junction")
+                .title("HD Junction")
                 .version("HOME WORK")
-                .description("JD Junction API Document")
-                .license("copyright all rights reserved. JD Junction")
+                .description("HD Junction API Document")
+                .license("copyright all rights reserved. HD Junction")
                 .build();
     }
 
@@ -49,7 +49,7 @@ public class SwaggerConfigure implements WebMvcConfigurer {
                 .securityContexts(Arrays.asList(securityContext()))
                 .securitySchemes(Arrays.asList(headerAuthorization()))
                 .apiInfo(apiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.jd.junction"))
+                .apis(RequestHandlerSelectors.basePackage("com.hd.junction"))
                 .build();
     }
 

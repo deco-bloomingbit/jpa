@@ -4,7 +4,7 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-3level %logger:%M [%L]- %msg %n</pattern>
         </encoder>
     </appender>
-    <logger name="com.jd" level="debug"/>
+    <logger name="com.hd" level="debug"/>
 
     <root level="INFO">
         <appender-ref ref="console" />

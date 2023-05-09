@@ -1,8 +1,8 @@
-package com.jd.junction.hospital.service;
+package com.hd.junction.hospital.service;
 
-import com.jd.junction.hospital.enumeration.HospitalEnum;
-import com.jd.junction.hospital.model.HospitalDTO;
-import com.jd.junction.hospital.repository.HospitalRepository;
+import com.hd.junction.hospital.enumeration.HospitalEnum;
+import com.hd.junction.hospital.model.HospitalDTO;
+import com.hd.junction.hospital.repository.HospitalRepository;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
@@ -39,7 +39,7 @@ public class HospitalService {
                     .id(item.id)
                     .doctorName(String.format("%s 병원장님", item.description))
                     .build();
-            hospitalRepository.save(hospitalDTO);
+            hospitalRepository.saveAndFlush(hospitalDTO);
         }
     }
 }
