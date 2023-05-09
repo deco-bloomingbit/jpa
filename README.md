@@ -1,3 +1,12 @@
+# PORT 8081
+
+# 구현 목록
+## 환자 등록 : POST /patient/regist
+## 환자 목록 조회 : GET /patient/inquiry
+
+# Swagger
+## http://localhost:8081/swagger-ui/
+
 # DB 스키마
 
 
